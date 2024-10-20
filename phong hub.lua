@@ -12,7 +12,7 @@ game.StarterGui:SetCore(
     "SendNotification",
     {
         Title = "phong hub",
-        Text = "chờ đi thằng chó",
+        Text = "phong là kẻ đẹp trái nhất trên đời",
         Duration = 5
     })
 ------------------------------------------------------------------------------------------------------------------------------------
