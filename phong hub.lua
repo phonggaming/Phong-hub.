@@ -10241,7 +10241,7 @@ Tabs.support:AddButton({
         Content = "Fixed slow and not attack mob if AFK long time"
     })
     Tabs.support:AddParagraph({
-        Title = "Fixed: Lag Script",
+        Title = "phít : Lác Script",
         Content = "Fixed drop fps laggy, now is smooth in future I will try to optimize"
     })
 
@@ -10250,7 +10250,7 @@ print("Developer: phong#0 ")
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 game.StarterGui:SetCore("SendNotification", {
 Title = "phonghub",
-Text = "Successfully",
+Text = "ken chó hoàn thành",
 Duration = 5,
 })
 
