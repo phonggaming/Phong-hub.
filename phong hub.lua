@@ -1,3 +1,61 @@
+-- Tạo các thành phần UI
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TitleLabel = Instance.new("TextLabel")
+local KeyTextBox = Instance.new("TextBox")
+local ConfirmButton = Instance.new("TextButton")
+
+-- Thuộc tính ScreenGui
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Thuộc tính Frame
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Frame.Size = UDim2.new(0, 300, 0, 200)
+Frame.Position = UDim2.new(0.5, -150, 0.5, -100)
+
+-- Thuộc tính TitleLabel
+TitleLabel.Parent = Frame
+TitleLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TitleLabel.Size = UDim2.new(1, 0, 0.3, 0)
+TitleLabel.Text = "Nhập Key để truy cập"
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.Font = Enum.Font.SourceSans
+TitleLabel.TextSize = 20
+
+-- Thuộc tính KeyTextBox
+KeyTextBox.Parent = Frame
+KeyTextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeyTextBox.Size = UDim2.new(0.8, 0, 0.2, 0)
+KeyTextBox.Position = UDim2.new(0.1, 0, 0.4, 0)
+KeyTextBox.PlaceholderText = "Nhập key của bạn..."
+KeyTextBox.Font = Enum.Font.SourceSans
+KeyTextBox.TextSize = 18
+KeyTextBox.Text = ""
+
+-- Thuộc tính ConfirmButton
+ConfirmButton.Parent = Frame
+ConfirmButton.BackgroundColor3 = Color3.fromRGB(85, 170, 255)
+ConfirmButton.Size = UDim2.new(0.8, 0, 0.2, 0)
+ConfirmButton.Position = UDim2.new(0.1, 0, 0.7, 0)
+ConfirmButton.Text = "Xác nhận"
+ConfirmButton.Font = Enum.Font.SourceSans
+ConfirmButton.TextSize = 18
+
+-- Key chính xác
+local correctKey = "phong123"
+
+-- Xử lý khi bấm nút xác nhận
+ConfirmButton.MouseButton1Click:Connect(function()
+    local enteredKey = KeyTextBox.Text
+    if enteredKey == correctKey then
+        print("Key đúng! Bạn đã truy cập vào hub.")
+        -- Thực hiện hành động khi key đúng, như mở giao diện khác hoặc kích hoạt chức năng
+    else
+        print("Key sai! Vui lòng thử lại.")
+        KeyTextBox.Text = "" -- Xóa nội dung nhập sai
+    end
+end)
 repeat
     wait()
 until game:IsLoaded()
